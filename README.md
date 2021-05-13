@@ -1,2 +1,2 @@
 # first-nodejs-server
-Basic server with Nodejs and express
+Server built with Nodejs and express
