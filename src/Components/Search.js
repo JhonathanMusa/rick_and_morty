@@ -14,8 +14,8 @@ export const Search = () => {
       const { data } = await axios.get(
         `https://rickandmortyapi.com/api/character/?name=${value}`
       );
-      setDatos(data.results[0].name);
-      console.log(data.results);
+      setDatos(data.results[0]);
+      console.log(data.results[0]);
     } catch (error) {
       console.log(error);
     }
@@ -38,7 +38,8 @@ export const Search = () => {
         />
         <button>Search</button>
       </form>
-      <p>{datos}</p>
+      <p>{datos.name}</p>
+      <img className="data-img" src={datos.image} alt=""  />
     </div>
   );
 };
