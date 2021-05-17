@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { ResultSearch } from "./ResultSearch";
 
 export const Search = () => {
   const [value, setValue] = useState("");
@@ -31,15 +32,15 @@ export const Search = () => {
     <div>
       <form onSubmit={submitHandle}>
         <input
+          className="search-input"
           onChange={valueHandler}
-          type="text"
-          value={value}
           placeholder="Search..."
+          value={value}
+          type="text"
         />
-        <button>Search</button>
+        <button className="search-btn">Search</button>
       </form>
-      <p>{datos.name}</p>
-      <img className="data-img" src={datos.image} alt=""  />
+      <ResultSearch datos={datos} />
     </div>
   );
 };

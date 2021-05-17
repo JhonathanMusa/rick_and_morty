@@ -37,8 +37,36 @@
   }
 }
 
-.data-img{
+/* .data-img{
   width: 300px;
   height: 300px;
   object-fit: contain;
+} */
+
+form {
+  margin-top: 20px;
+}
+
+.search-input {
+  border: none;
+  width: 200px;
+  height: 20px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  color: #817d7d;
+}
+
+.search-btn {
+  border: none;
+  height: 25px;
+  border: 1px solid #7e7c7c;
+  border-radius: 5px;
+  background: #7e7c7c;
+  color: #e1e1e1;
+  cursor: pointer;
+}
+
+.search-btn:hover{
+  border: 1px solid #4d4949;
+  background: #4d4949;
 }
