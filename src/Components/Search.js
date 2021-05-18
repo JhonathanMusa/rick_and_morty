@@ -1,30 +1,17 @@
-import axios from "axios";
 import React, { useState } from "react";
-import { ResultSearch } from "./ResultSearch";
+import { useDispatch } from "react-redux";
+import fetch_datos from "../redux/actions/SearchActions";
 
 export const Search = () => {
+  const dispatch = useDispatch();
   const [value, setValue] = useState("");
-  const [datos, setDatos] = useState([]);
 
   const valueHandler = (e) => {
     setValue(e.target.value);
   };
 
-  const fetchData = async () => {
-    try {
-      const { data } = await axios.get(
-        `https://rickandmortyapi.com/api/character/?name=${value}`
-      );
-      setDatos(data.results[0]);
-      console.log(data.results[0]);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   const submitHandle = (e) => {
     e.preventDefault();
-    fetchData();
     setValue("");
   };
 
@@ -38,9 +25,13 @@ export const Search = () => {
           value={value}
           type="text"
         />
-        <button className="search-btn">Search</button>
+        <button
+          className="search-btn"
+          onClick={() => dispatch(fetch_datos(value))}
+        >
+          Search
+        </button>
       </form>
-      <ResultSearch datos={datos} />
     </div>
   );
 };
