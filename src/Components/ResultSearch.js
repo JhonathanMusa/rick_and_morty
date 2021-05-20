@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
+import styles from "./Result.module.css"
 
-export const ResultSearch = ({ datos }) => {
+export const ResultSearch = () => {
   const search = useSelector((state) => state.search);
   return (
     <div>
@@ -10,7 +11,9 @@ export const ResultSearch = ({ datos }) => {
         <div>
           <p>{search.characters[0].results[0].name}</p>
           <img
-            className="data-img"
+            with={300}
+            height={300}
+            className={styles.dataImg}
             src={search.characters[0].results[0].image}
             alt=""
           />

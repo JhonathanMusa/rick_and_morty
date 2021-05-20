@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import fetch_datos from "../redux/actions/SearchActions";
+import styles from "./Search.module.css";
 
 export const Search = () => {
   const dispatch = useDispatch();
@@ -17,16 +18,16 @@ export const Search = () => {
 
   return (
     <div>
-      <form onSubmit={submitHandle}>
+      <form className={styles.formSearch} onSubmit={submitHandle}>
         <input
-          className="search-input"
+          className={styles.searchInput}
           onChange={valueHandler}
           placeholder="Search..."
           value={value}
           type="text"
         />
         <button
-          className="search-btn"
+          className={styles.searchBtn}
           onClick={() => dispatch(fetch_datos(value))}
         >
           Search
