@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import styles from "./Result.module.css"
+import { CharacterCard } from "./CharacterCard";
 
 export const ResultSearch = () => {
   const search = useSelector((state) => state.search);
@@ -9,14 +9,7 @@ export const ResultSearch = () => {
       {search.loading && <div>Searching...</div>}
       {search.characters.length >= 1 && (
         <div>
-          <p>{search.characters[0].results[0].name}</p>
-          <img
-            with={300}
-            height={300}
-            className={styles.dataImg}
-            src={search.characters[0].results[0].image}
-            alt=""
-          />
+          <CharacterCard search={search} />
         </div>
       )}
       {search.error !== "" && <span>{search.error}</span>}
