@@ -3,8 +3,7 @@
 }
 
 .searchInput {
-  border: none;
-  width: 200px;
+  width: 300px;
   height: 20px;
   border: 1px solid #e1e1e1;
   border-radius: 5px;
@@ -12,16 +11,16 @@
 }
 
 .searchBtn {
-  border: none;
-  height: 25px;
-  border: 1px solid #7e7c7c;
+  width: 60px;
+  height: 1.5rem;
+  border: 1px solid #A64149;
   border-radius: 5px;
-  background: #7e7c7c;
+  background: #A64149;
   color: #e1e1e1;
   cursor: pointer;
 }
 
 .searchBtn:hover {
-  border: 1px solid #4d4949;
-  background: #4d4949;
+  border: 1px solid #923940;
+  background: #923940;
 }
