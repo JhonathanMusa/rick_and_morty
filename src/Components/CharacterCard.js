@@ -1,16 +1,20 @@
-import styles from "./Result.module.css"
+import styles from "./Result.module.css";
 
 export const CharacterCard = ({ search }) => {
   return (
-    <div>
-      <p>{search.characters[0].results[0].name}</p>
-      <img
-        with={300}
-        height={300}
-        className={styles.dataImg}
-        src={search.characters[0].results[0].image}
-        alt=""
-      />
-    </div>
+    <li className={styles.cardGrid}>
+      {search.characters[0].results.map((item) => (
+        <div key={item.id}>
+          <span>{item.name}</span>
+          <img
+            with={300}
+            height={300}
+            className={styles.dataImg}
+            src={item.image}
+            alt=""
+          />
+        </div>
+      ))}
+    </li>
   );
 };

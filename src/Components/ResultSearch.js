@@ -8,9 +8,9 @@ export const ResultSearch = () => {
       <h3>Results: </h3>
       {search.loading && <div>Searching...</div>}
       {search.characters.length >= 1 && (
-        <div>
+        <ul>
           <CharacterCard search={search} />
-        </div>
+        </ul>
       )}
       {search.error !== "" && <span>{search.error}</span>}
     </div>
