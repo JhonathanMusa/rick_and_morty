@@ -1,3 +1,3 @@
 # rick_morty_api
-Using Rick & Morty API 
+Practice with Rick & Morty API, application bult with React and Redux
 
