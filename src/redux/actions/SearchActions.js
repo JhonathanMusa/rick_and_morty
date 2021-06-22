@@ -25,11 +25,11 @@ const fetchDataError = (error) => {
   };
 };
 
-const fetch_data = () => {
+const fetch_data = (page) => {
   return (dispatch) => {
     dispatch(fetcDataRequest());
     axios
-      .get(`https://rickandmortyapi.com/api/character/`)
+      .get(`https://rickandmortyapi.com/api/character?page=${page}`)
       .then((response) => {
         dispatch(fetchDataSuccess([response.data]));
       })

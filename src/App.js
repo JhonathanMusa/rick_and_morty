@@ -1,6 +1,5 @@
 import { Provider } from "react-redux";
-import { ResultSearch } from "./Components/ResultSearch";
-import { Search } from "./Components/Search";
+import { Search } from "./pages/Search";
 import store from "./redux/store";
 
 function App() {
@@ -8,7 +7,6 @@ function App() {
     <div className="App">
       <Provider store={store}>
         <Search />
-        <ResultSearch />
       </Provider>
     </div>
   );

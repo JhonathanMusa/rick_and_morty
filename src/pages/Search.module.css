@@ -1,0 +1,72 @@
+.formSearch {
+  margin-top: 20px;
+}
+
+.searchInput {
+  width: 300px;
+  height: 20px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  color: #817d7d;
+}
+
+.searchBtn {
+  width: 60px;
+  height: 1.5rem;
+  border: 1px solid #a64149;
+  border-radius: 5px;
+  background: #a64149;
+  color: #e1e1e1;
+  cursor: pointer;
+}
+
+.searchBtn:hover {
+  border: 1px solid #923940;
+  background: #923940;
+}
+
+/* RESULTS */
+.dataImg {
+  border-radius: 10px;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-rows: auto;
+  gap: 40px;
+  padding: 10px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* @media screen and (max-width: 1000px){
+    .cardGrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 680px){
+    .cardGrid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+ */
+.BtnChangePageContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.BtnChangePage {
+  background: none;
+  border: none;
+  color: #923940;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.BtnChangePage:hover{
+  color: #a17074;
+}

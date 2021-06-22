@@ -1,4 +1,4 @@
-import styles from "./Result.module.css";
+import styles from "./CharacterCard.module.css";
 
 export const CharacterCard = ({ search }) => {
   return (
