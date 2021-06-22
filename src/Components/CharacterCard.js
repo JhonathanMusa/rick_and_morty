@@ -2,10 +2,9 @@ import styles from "./Result.module.css";
 
 export const CharacterCard = ({ search }) => {
   return (
-    <li className={styles.cardGrid}>
+    <div className={styles.cardGrid}>
       {search.characters[0].results.map((item) => (
         <div key={item.id}>
-          <span>{item.name}</span>
           <img
             with={300}
             height={300}
@@ -13,8 +12,9 @@ export const CharacterCard = ({ search }) => {
             src={item.image}
             alt=""
           />
+          <p>{item.name}</p>
         </div>
       ))}
-    </li>
+    </div>
   );
 };

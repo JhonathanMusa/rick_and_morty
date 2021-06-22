@@ -1,11 +1,24 @@
-.dataImg{
-    border-radius: 10px;
+.dataImg {
+  border-radius: 10px;
 }
 
-.cardGrid{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 230px);
-    gap: 40px;
-    padding: 40px;
-    justify-content: center;
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 40px;
+  padding: 10px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1000px){
+    .cardGrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 680px){
+    .cardGrid{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

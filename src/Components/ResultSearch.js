@@ -5,13 +5,9 @@ export const ResultSearch = () => {
   const search = useSelector((state) => state.search);
   return (
     <div>
-      <h3>Results: </h3>
+      <h1>Characters: </h1>
       {search.loading && <div>Searching...</div>}
-      {search.characters.length >= 1 && (
-        <ul>
-          <CharacterCard search={search} />
-        </ul>
-      )}
+      {search.characters.length >= 1 && <CharacterCard search={search} />}
       {search.error !== "" && <span>{search.error}</span>}
     </div>
   );

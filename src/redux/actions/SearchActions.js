@@ -25,16 +25,17 @@ const fetchDataError = (error) => {
   };
 };
 
-const fetch_data = (value) => {
+const fetch_data = () => {
   return (dispatch) => {
     dispatch(fetcDataRequest());
     axios
-      .get(`https://rickandmortyapi.com/api/character/?name=${value}`)
+      .get(`https://rickandmortyapi.com/api/character/`)
       .then((response) => {
         dispatch(fetchDataSuccess([response.data]));
       })
       .catch((error) => {
         dispatch(fetchDataError("Character not found"));
+        console.log(error);
       });
   };
 };
