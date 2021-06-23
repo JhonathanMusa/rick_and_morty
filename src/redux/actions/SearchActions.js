@@ -11,10 +11,10 @@ const fetcDataRequest = () => {
   };
 };
 
-const fetchDataSuccess = (caracter) => {
+const fetchDataSuccess = (character) => {
   return {
     type: FETCH_DATA_SUCCESS,
-    payload: caracter,
+    payload: character,
   };
 };
 
@@ -34,7 +34,7 @@ const fetch_data = (page) => {
         dispatch(fetchDataSuccess([response.data]));
       })
       .catch((error) => {
-        dispatch(fetchDataError("Character not found"));
+        dispatch(fetchDataError("Page not found"));
         console.log(error);
       });
   };

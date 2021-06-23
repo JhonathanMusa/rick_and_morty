@@ -26,7 +26,6 @@ export const Search = () => {
 
   return (
     <div>
-      <h1>Characters: </h1>
       <form>
         <FormInput type={"text"}/>
       </form>
