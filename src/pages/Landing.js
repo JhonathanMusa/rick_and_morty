@@ -1,10 +1,12 @@
-import React from 'react'
-import {Search} from "./Search"
+import React from "react";
+import { CharactersRender } from "./CharactersRender";
+import { CharacterSearch } from "./CharacterSearch";
 
 export default function Landing() {
-    return (
-        <div>
-            <Search />
-        </div>
-    )
+  return (
+    <div >
+      <CharacterSearch />
+      <CharactersRender />
+    </div>
+  );
 }

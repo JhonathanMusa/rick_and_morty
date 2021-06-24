@@ -3,9 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import fetch_datos from "../redux/actions/SearchActions";
 import { CharacterCard } from "../Components/CharacterCard"
 import style from "./Search.module.css"
-import { FormInput } from "../Components/FormInput"
 
-export const Search = () => {
+export const CharactersRender = () => {
   const [page, setPage] = useState(1)
   const dispatch = useDispatch();
   const search = useSelector((state) => state.search);
@@ -26,9 +25,6 @@ export const Search = () => {
 
   return (
     <div>
-      <form>
-        <FormInput type={"text"}/>
-      </form>
       {search.loading && <div>Searching...</div>}
       {search.characters.length >= 1 && <CharacterCard search={search} />}
       {search.error !== "" && <span>{search.error}</span>}
