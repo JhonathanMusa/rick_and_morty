@@ -1,0 +1,18 @@
+.cardDetailsGrid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 10px 0;
+
+    width: 350px;
+    background: rgb(231, 230, 233);
+    box-shadow: 1px 3px 4px 1px #a64149;
+
+    border-radius: 10px;
+}
+
+.detailsImg{
+    border-radius: 10px;
+}
