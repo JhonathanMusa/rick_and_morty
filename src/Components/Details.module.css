@@ -16,3 +16,15 @@
 .detailsImg{
     border-radius: 10px;
 }
+
+.cardBody{
+    padding: 10px;
+}
+
+.btnBack {
+    background: none;
+    border: none;
+    color: #923940;
+    cursor: pointer;
+    font-size: 2rem;
+  }
