@@ -12,14 +12,14 @@ export const CharacterSearch = () => {
   };
   return (
     <div className={style.search_container}>
-      <Link className="title" to="/">
+      <Link className={style.title} to="/">
         <h1>Characters: </h1>
       </Link>
       <FormInput
         type={"text"}
         name={"search"}
         handleChange={filterCharacter}
-        placeholder={"Search"}
+        placeholder={"Filter Character"}
       />
     </div>
   );

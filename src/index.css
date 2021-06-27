@@ -28,11 +28,3 @@ p {
   font-size: 1.2rem;
 }
 
-.title {
-  text-decoration: none;
-  color: #a64149;
-}
-
-.title:hover {
-  color: #a17074;
-}
