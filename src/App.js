@@ -1,8 +1,8 @@
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import store from "./redux/store";
-import { CharacterDetails } from "./pages/CharacterDetails";
-import Landing from "./pages/Landing";
+import { CharacterDetails } from "./screens/CharacterDetails";
+import Landing from "./screens/Landing";
 
 function App() {
   return (
