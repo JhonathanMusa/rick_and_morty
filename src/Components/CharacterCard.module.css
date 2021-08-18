@@ -1,6 +1,10 @@
 .dataImg {
   border-radius: 10px;
-  box-shadow: 1px 3px 4px 1px #a64149;
+  box-shadow: 1px 1px 1px 1px #a64149;
+}
+
+.dataImg:hover {
+  box-shadow: 3px 3px 4px 3px #a64149;
 }
 
 .cardGrid {
@@ -12,7 +16,6 @@
   justify-content: center;
   cursor: pointer;
 }
-
 
 /* @media screen and (max-width: 1000px){
     .cardGrid{
